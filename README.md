@@ -59,6 +59,7 @@ http://127.0.0.1:8000
 * Log in to the app
 * View user profile
 * Log out of the app
+* Log out of all devices
 
 
 ## Contributing

@@ -1,6 +1,7 @@
 ## Login
 GET /api/v1/login HTTP/1.1
 Host: RestApi.test
+Content-Encoding: gzip
 Accept: application/json
 Content-Type: application/json
 
@@ -15,6 +16,7 @@ Content-Type: application/json
 POST /api/v1/register HTTP/1.1
 Host: RestApi.test
 Accept: application/json
+Content-Encoding: gzip
 Content-Type: application/json
 
 {
@@ -26,18 +28,27 @@ Content-Type: application/json
 }
 
 #######################
+
 ## User Profile Details
 GET /api/v1/user HTTP/1.1
 Host: RestApi.test
 Accept: application/json
 Content-Type: application/json
-Authorization: Bearer 7|lQjx72s78qgnkruq6zCBFoWFtymEbvH3KfuwNJlO
-
+Authorization: Bearer {token}
 
 #######################
 
 ## Logout
 GET /api/v1/logout HTTP/1.1
+Host: RestApi.test
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {token}
+
+#######################
+
+## Logout
+GET /api/v1/logout/all HTTP/1.1
 Host: RestApi.test
 Accept: application/json
 Content-Type: application/json

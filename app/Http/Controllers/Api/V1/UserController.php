@@ -84,8 +84,6 @@ class UserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        $token = $user->createToken('auth_token')->plainTextToken;
-
         return response()->json([
             'status' => 'success',
             'message' => 'User created successfully',
@@ -135,6 +133,26 @@ class UserController extends Controller
             'data' => [
                 'user' => new UserResource($request->user()),
             ],
+        ], 200);
+
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => 'error',
+                'message' => $th->getMessage(),
+            ], 500);
+        }
+    }
+
+    //api/v1/logout all devices
+    public function logoutAll(Request $request)
+    {
+        try {
+
+        $request->user()->tokens()->delete();
+
+        return response()->json([
+            'status' => 'success',
+            'message' => 'User logged out successfully from all devices',
         ], 200);
 
         } catch (\Throwable $th) {

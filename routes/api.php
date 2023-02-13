@@ -24,6 +24,7 @@ Route::group(['prefix' => 'v1', 'namespace'=> 'App\Http\Controllers\Api\V1'], fu
     Route::group(['middleware' => 'auth:sanctum'], function () {
         Route::get('logout', 'UserController@logout');
         Route::get('user', 'UserController@user');
+        Route::get('logout/all', 'UserController@logoutAll');
     });
 
 });
