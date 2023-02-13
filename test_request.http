@@ -1,0 +1,46 @@
+## Login
+GET /api/v1/login HTTP/1.1
+Host: RestApi.test
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "kcbhende@gmail.com",
+    "password": "Test1234"
+}
+
+#######################
+
+## Register
+POST /api/v1/register HTTP/1.1
+Host: RestApi.test
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "Cliff",
+    "surname": "Ben",
+    "email": "kcbhende@gmail.com",
+    "password": "Test1234",
+    "password_confirmation": "Test1234"
+}
+
+#######################
+## User Profile Details
+GET /api/v1/user HTTP/1.1
+Host: RestApi.test
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer 7|lQjx72s78qgnkruq6zCBFoWFtymEbvH3KfuwNJlO
+
+
+#######################
+
+## Logout
+GET /api/v1/logout HTTP/1.1
+Host: RestApi.test
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {token}
+
+
