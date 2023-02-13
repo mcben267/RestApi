@@ -1,8 +1,8 @@
 # Rest API App
 <p align="center">
-
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+
 A simple Laravel Rest Api with santum authentication package that could handle both first-party web requests from a web browser and API requests via tokens.
 
 ## Requirements
